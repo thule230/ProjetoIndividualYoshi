@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quanto Ganha Por Hora"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="25sp"
+        android:id="@+id/tv_header"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome:"
+        android:textSize="20sp"
+        android:id="@+id/tv_nome"
+        app:layout_constraintTop_toBottomOf="@id/tv_header"
+        android:layout_marginTop="40dp"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_nome"
+        android:hint="Digite seu primeiro nome"
+        android:id="@+id/et_nome"
+        android:inputType="text"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horas de trabalho:"
+        android:textSize="20sp"
+        android:id="@+id/tv_horas"
+        app:layout_constraintTop_toBottomOf="@id/et_nome"
+        android:layout_marginTop="35dp"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_horas"
+        android:hint="Digite quantas horas você trabalha por dia"
+        android:id="@+id/et_horas"
+        android:inputType="numberDecimal"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salário:"
+        android:textSize="20sp"
+        android:id="@+id/tv_salario"
+        app:layout_constraintTop_toBottomOf="@id/et_horas"
+        android:layout_marginTop="35dp"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_salario"
+        android:hint="Digite qual o seu salário em reais"
+        android:id="@+id/et_salario"
+        android:inputType="numberDecimal"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_salario"
+        android:id="@+id/bt_calcular"
+        android:text="Calcular"
+        android:onClick="calcular"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bt_calcular"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:id="@+id/tv_resultado"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
