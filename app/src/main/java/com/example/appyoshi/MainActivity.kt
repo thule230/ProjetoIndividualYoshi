@@ -30,11 +30,12 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Digite apenas o primeiro nome", Toast.LENGTH_SHORT).show()
             }
             else {
+                // Adotando que cada mês tem, em média, 21 dias uteis
                 val valor = String.format("%.2f",
-                    et_salario.text.toString().toDouble() / et_horas.text.toString().toDouble()
+                    (et_salario.text.toString().toDouble() / 21) / et_horas.text.toString().toDouble()
                 ).toDouble()
 
-                var resultado = "${et_nome.text} ganha $valor reais por hora."
+                var resultado = "${et_nome.text} ganha, em média, $valor reais por hora."
 
                 if (valor < 4.75){
                     resultado += " É menos que o salário mínimo"
